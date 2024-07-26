@@ -39,8 +39,9 @@ class TouchEvent(BaseModel):
     time: Optional[datetime] = Field(default=None, description="Timestamp of when the occurrence happened. Must adhere to RFC 3339.")
     data: Optional[Touch] = None
     data_base64: Optional[StrictStr] = Field(default=None, description="Base64 encoded event payload. Must adhere to RFC4648.")
+    knativebrokerttl: Optional[StrictStr] = Field(default='255', description="knative broker ttl, workaround for https://github.com/knative-extensions/eventing-natss/issues/518")
     additional_properties: Dict[str, Any] = {}
-    __properties: ClassVar[List[str]] = ["id", "source", "specversion", "type", "datacontenttype", "dataschema", "subject", "time", "data", "data_base64"]
+    __properties: ClassVar[List[str]] = ["id", "source", "specversion", "type", "datacontenttype", "dataschema", "subject", "time", "data", "data_base64", "knativebrokerttl"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -112,7 +113,8 @@ class TouchEvent(BaseModel):
             "subject": obj.get("subject") if obj.get("subject") is not None else 'node',
             "time": obj.get("time"),
             "data": Touch.from_dict(obj["data"]) if obj.get("data") is not None else None,
-            "data_base64": obj.get("data_base64")
+            "data_base64": obj.get("data_base64"),
+            "knativebrokerttl": obj.get("knativebrokerttl") if obj.get("knativebrokerttl") is not None else '255'
         })
         # store additional fields in additional_properties
         for _key in obj.keys():
