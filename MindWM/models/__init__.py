@@ -19,4 +19,6 @@ from MindWM.models.clipboard_context import ClipboardContext
 from MindWM.models.clipboard_event import ClipboardEvent
 from MindWM.models.io_document import IoDocument
 from MindWM.models.io_document_event import IoDocumentEvent
+from MindWM.models.touch import Touch
+from MindWM.models.touch_event import TouchEvent
 from MindWM.models.vector2int import Vector2int
