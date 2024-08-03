@@ -4,6 +4,8 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/24.05";
     flake-parts.url = "github:hercules-ci/flake-parts";
+    neomodel-py.url = "github:omgbebebe/neomodel.py-nix";
+    neomodel-py.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = inputs@{ flake-parts, nixpkgs, ... }:
@@ -15,6 +17,7 @@
         my_python = pkgs.python3.withPackages (ps: with ps; [
           pydantic dateutil urllib3
           opentelemetry-sdk opentelemetry-exporter-otlp
+          inputs.neomodel-py.packages.${system}.default
         ]);
         project = pkgs.callPackage ./package.nix {
           python = my_python;
