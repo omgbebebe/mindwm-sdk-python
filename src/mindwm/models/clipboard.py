@@ -19,8 +19,8 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
-from MindWM.models.clipboard_context import ClipboardContext
-from MindWM.models.vector2int import Vector2int
+from mindwm.models.clipboard_context import ClipboardContext
+from mindwm.models.vector2int import Vector2int
 from typing import Optional, Set
 from typing_extensions import Self
 

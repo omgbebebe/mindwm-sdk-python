@@ -21,7 +21,7 @@ from datetime import datetime
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from MindWM.models.io_document import IoDocument
+from mindwm.models.io_document import IoDocument
 from typing import Optional, Set
 from typing_extensions import Self
 

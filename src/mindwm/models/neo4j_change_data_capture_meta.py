@@ -19,7 +19,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List
-from MindWM.models.neo4j_change_data_capture_meta_source import Neo4jChangeDataCaptureMetaSource
+from mindwm.models.neo4j_change_data_capture_meta_source import Neo4jChangeDataCaptureMetaSource
 from typing import Optional, Set
 from typing_extensions import Self
 

@@ -17,8 +17,8 @@ import json
 import pprint
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, ValidationError, field_validator
 from typing import Any, List, Optional
-from MindWM.models.neo4j_change_data_capture_node_payload import Neo4jChangeDataCaptureNodePayload
-from MindWM.models.neo4j_change_data_capture_relationship_payload import Neo4jChangeDataCaptureRelationshipPayload
+from mindwm.models.neo4j_change_data_capture_node_payload import Neo4jChangeDataCaptureNodePayload
+from mindwm.models.neo4j_change_data_capture_relationship_payload import Neo4jChangeDataCaptureRelationshipPayload
 from pydantic import StrictStr, Field
 from typing import Union, List, Set, Optional, Dict
 from typing_extensions import Literal, Self

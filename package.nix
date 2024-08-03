@@ -12,6 +12,10 @@ python3.pkgs.buildPythonPackage {
 
   propagatedBuildInputs = [ python dbus ];
 
+  pythonImportsCheck = [
+    "mindwm.models"
+    "mindwm.neomodel"
+  ];
   format = "pyproject";
   nativeBuildInputs = with python3.pkgs; [ setuptools ];
 }

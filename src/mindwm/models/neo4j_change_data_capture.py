@@ -20,9 +20,9 @@ import json
 from datetime import datetime
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List
-from MindWM.models.neo4j_change_data_capture_meta import Neo4jChangeDataCaptureMeta
-from MindWM.models.neo4j_change_data_capture_payload import Neo4jChangeDataCapturePayload
-from MindWM.models.neo4j_change_data_capture_schema import Neo4jChangeDataCaptureSchema
+from mindwm.models.neo4j_change_data_capture_meta import Neo4jChangeDataCaptureMeta
+from mindwm.models.neo4j_change_data_capture_payload import Neo4jChangeDataCapturePayload
+from mindwm.models.neo4j_change_data_capture_schema import Neo4jChangeDataCaptureSchema
 from typing import Optional, Set
 from typing_extensions import Self
 
